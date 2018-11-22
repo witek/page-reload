@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+TARGET_FILE=target/page-reload.js
+
+rm -rf target/*
+clojure -m cljs.main --output-dir target --output-to $TARGET_FILE --optimizations advanced --compile page-reload.api
+cp -v $TARGET_FILE /mnt/r2/var/www/servisto.de/projects/page-reload/
+
