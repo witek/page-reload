@@ -1,3 +1,10 @@
-{:deps {cljs-ajax {:mvn/version "0.8.0"}
-        org.clojure/clojurescript {:mvn/version "1.10.339"}}
+{:deps {cljs-ajax                 {:mvn/version "RELEASE"}
+        org.clojure/clojurescript {:mvn/version "RELEASE"}}
  :paths ["src"]}
+
+ :aliases
+ {:dev {:extra-paths ["target"]
+        :main-opts ["--main" "figwheel.main" "--build" "dev"]}
+
+  :ancient {:main-opts ["-m" "deps-ancient.deps-ancient"]
+            :extra-deps {deps-ancient {:mvn/version "RELEASE"}}}}}
