@@ -12,10 +12,10 @@ In your HTML page include this at the bottom of the `body` tag:
 <script>page_reload.api.watch();</script>
 ```
 
+## Product Backlog
 
-## License
-
-Copyright © 2018 Witoslaw Koczewski
-
-Distributed under the Eclipse Public License either version 1.0 or any later
-version.
+* Status indicator
+* Show errors
+* Retry after error
+* Restrict to localhost / deactivate in production
+* Activation via URL parameter
