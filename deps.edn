@@ -1,9 +1,11 @@
 {:deps {cljs-ajax                 {:mvn/version "RELEASE"}
         org.clojure/clojurescript {:mvn/version "RELEASE"}}
- :paths ["src"]}
+ :paths ["src"]
 
  :aliases
- {:dev {:extra-paths ["target"]
+ {:dev {:extra-paths ["resources" "target"]
+        :extra-deps {com.bhauman/figwheel-main {:mvn/version "RELEASE"}
+                     com.bhauman/rebel-readline-cljs {:mvn/version "RELEASE"}}
         :main-opts ["--main" "figwheel.main" "--build" "dev"]}
 
   :ancient {:main-opts ["-m" "deps-ancient.deps-ancient"]
